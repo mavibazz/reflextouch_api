@@ -1,11 +1,12 @@
 const express = require("express")
 const mongoose = require("mongoose")
 const cors = require("cors")
-
+const dotenv = require("dotenv")
+dotenv.config()
 
 const app = express()
 mongoose
-.connect("mongodb://127.0.0.1:27017/reflextouch")
+.connect(process.env.MONGODB_URL)
 .then(()=> console.log("Connected to Database..."))
 .catch((err)=>console.log(err))
 
