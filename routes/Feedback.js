@@ -45,7 +45,7 @@ router.post("/",login_required, async(req, res)=>{
         }
 
         let feedback = new Feedback({
-            user: req.user._id,
+            user: req.body._id,
             text: req.body.text,
             rating: req.body.rating
         })
