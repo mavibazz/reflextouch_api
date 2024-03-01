@@ -3,7 +3,7 @@ const mongoose = require("mongoose")
 const Feedback = mongoose.model("Feedback", new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Users"
+        ref: "User"
     },
     text: {type: String, required: true},
     rating: {type: Number, required: true},
